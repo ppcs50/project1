@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   weather.html
+{% endblock %}
+
+{% block body %}
+      <div class="alert alert-light" role="alert">
+
+        <h2>ZIP Code or City Name</h2>
+        <hr>
+        <ul>
+        <h6>
+        <li>a partial information is acceptable.</li>
+        <li>e.g. 'BOS' for 'BOSTON', 'YOR' for 'NEW YORK', ...</li>
+        <li>lower case is also acceptable.</li>
+        </h6>
+        </ul>
+
+      </div>
+      <br>
+    <h3 class="form-signin-heading text-muted">Type Here:</h3>
+    <form action="{{ url_for('search') }}" method="post">
+
+    <div class="form-group">
+        <input class="form-control" name="keyword" placeholder="Search..." required="" autofocus="">
+    </div>
+        <div class="form-group">
+            <button class="btn btn-lg btn-primary btn-block">Search</button>
+        </div>
+    </form>
+
+
+<br>
+<br>
+<br>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Project 1: Rainy Day - Register
+{% endblock %}
+
+{% block body %}
+      <br>
+      <br>
+<div id="fullscreen_bg" class="fullscreen_bg">
+
+<div class="container">
+
+    <form class="form-signin" action="{{ url_for('register') }}" method="POST">
+		<h1 class="form-signin-heading text-muted">Register</h1>
+
+		<hr>
+		<h5>Your password not gonna be hashed, so never use your real password!</h5>
+		<br>
+
+		<input type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+		<input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+		<button class="btn btn-lg btn-primary btn-block" type="submit">
+			Register
+		</button>
+	</form>
+
+</div>
+      <br>
+      <br>
+
+{% endblock %}
+
+

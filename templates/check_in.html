@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Check In Success!
+{% endblock %}
+
+{% block body %}
+    <div class="alert alert-success" role="alert">
+    <h1>{{ message }}</h1>
+    <hr>
+    </div>
+    <br><br>
+    <a href="{{ url_for('weather') }}">Back</a>
+
+{% endblock %}

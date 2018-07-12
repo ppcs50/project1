@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Project 1: Rainy Day - Log in
+{% endblock %}
+
+{% block body %}
+      <br>
+      <br>
+
+    <form class="form-signin" action="{{ url_for('signin') }}" method="POST">
+	<div class="container">
+		<h1 class="form-signin-heading text-muted">Log In</h1>
+
+		<hr>
+		<h5>If you don't have an account, just <a href="{{ url_for('register_form') }}">register</a> now.</h5>
+		<br>
+
+		<input type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+		<input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+	</div>
+	</form>
+
+      <br>
+      <br>
+{% endblock %}

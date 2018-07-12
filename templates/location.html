@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Project 1: Rainy Day - Location
+{% endblock %}
+
+{% block body %}
+    <div class="alert alert-info" role="alert">
+        <h2>{{ zips.city }}, {{ zips.state }} {{ zips.zipcode }}</h2>
+        <hr>
+            <form action="{{ url_for('check_in', zipcode=zips.zipcode) }}" method='get'>
+                <div>
+                <button type="submit" class="btn btn-lg btn-info btn-block" id="check_in">Check-In</button>
+                </div>
+            </form>
+
+        <hr>
+            <ul>
+            <h4>geographic info.</h4>
+            <li><h5>Latitude: {{ zips.lat }}</h5></li>
+            <li><h5>Longitude: {{ zips.long }}</h5></li>
+            <li><h5>Population: {{ zips.population }}</h5></li>
+            </ul>
+
+        <hr>
+            <ul>
+            <h4>DARKSPY API</h4>
+            <li><h5>Time: {{ w_time }}</h5></li>
+            <li><h5>Summary: {{ w_summary }}</h5></li>
+            <li><h5>Temperature: {{ w_temp }}</h5></li>
+            <li><h5>Dew Point: {{ w_dewpoint }}</h5></li>
+            <li><h5>Humidity: {{ w_humid }}%</h5></li>
+            </ul>
+    </div>
+
+<br>
+
+    <form action="{{ url_for('location', zipcode=zips.zipcode) }}" method='post'>
+        <div class="form-group">
+            <ul id="comments">
+                <h5> Comments </h5>
+                <hr>
+                <br>
+
+                    {% for comments in comments %}
+                    <li>{{ comments.comment }}</li>
+                    {% endfor %}
+
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="comment" name="comment" required="">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-lg btn-primary btn-block">Comment</button>
+        </div>
+    </form>
+
+    <br>
+    <br>
+{% endblock %}

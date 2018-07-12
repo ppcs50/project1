@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Project 1: Rainy Day - Result
+{% endblock %}
+
+{% block body %}
+
+        <div class="alert alert-success" role="alert">
+        <h1> {{ lenzips }} result(s) found:</h1>
+        <hr>
+        <h6>Please select a specific address and click the Location button.<h6>
+        </div>
+
+        <table class="table table-hover">
+
+            <thead class="thead-light">
+                <th scope="col">ZIP Code</th>
+                <th scope="col">City or Town</th>
+                <th scope="col">State</th>
+                <th scope="col">Location</th>
+            </thead>
+
+            <tbody name="zips_id">
+                {% for zips in zips %}
+                <tr>
+                <th scope="row">[{{ zips.zipcode }}]</th>
+                <td>{{ zips.city }}</td>
+                <td>{{ zips.state }}</td>
+                <td> <a href="{{ url_for('location', zipcode=zips.zipcode) }}" class="btn btn-dark" role="button">Location</a></td>
+                {% endfor %}
+            </tbody>
+        </table>
+
+{% endblock %}

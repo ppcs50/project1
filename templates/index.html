@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Project 1: Rainy Day
+{% endblock %}
+
+{% block body %}
+
+  <article>
+
+  <br>
+
+    <div>
+
+      <h4>Welcome,<br>{{ username }}!</h4>
+
+      <hr>
+
+      <p>Through this web application, you can search weather information based on a location, by using Dark Sky API.</p>
+
+      <br>
+
+      <p>Just click the <a href="{{ url_for('weather') }}">Weather</a> tab and get started.</p>
+
+    </div>
+
+  </article>
+
+{% endblock %}
