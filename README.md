@@ -8,7 +8,7 @@ Users can get some geographical information and weather information by searching
 
 ## What's going on here?
 
-### /
+### 1. (/)
 #### application.py
 this is the main file make able to run my application.
 
@@ -38,7 +38,7 @@ This file.
 #### requirements.txt
 #### zips,.csv
 
-### /templates/
+### 2. (/templates/)
 #### check_in.html, check_in_error.html
 check_in(zipcode) will returns whether of these two pages depend on the result.
 
@@ -69,7 +69,7 @@ It lists every matching results from the databse with the keyword that user has 
 #### weather.html
 In this page, user can input a keyword of zip codes or city names to find information.
 
-### /static/css
+### 3. (/static/css)
 #### style.css, style.css.map, style.scss
 This is slightly modified version of my previous project, number 0.
 
