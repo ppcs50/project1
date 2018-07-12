@@ -36,7 +36,9 @@ To import zips.csv to my SQL database. I added some lines myself to solve the pr
 This file.
 
 #### requirements.txt
-#### zips,.csv
+#### zips.csv
+
+
 
 ### 2. (/templates/)
 #### check_in.html, check_in_error.html
@@ -68,6 +70,8 @@ It lists every matching results from the databse with the keyword that user has 
 
 #### weather.html
 In this page, user can input a keyword of zip codes or city names to find information.
+
+
 
 ### 3. (/static/css)
 #### style.css, style.css.map, style.scss
